@@ -1,0 +1,4 @@
+Consulta para el dataset de la BD en SQL
+SELECT TABLE_NAME, COLUMN_NAME
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_SCHEMA = 'nombre_de_tu_base_datos';
