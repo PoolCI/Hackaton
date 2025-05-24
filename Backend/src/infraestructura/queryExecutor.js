@@ -1,4 +1,4 @@
-const pool = require('./bd'); // Importa la conexión con MariaDB
+const pool = require('./baseDatos'); // Importa la conexión con MariaDB
 
 const executeQuery = async (sqlQuery) => {
     try {

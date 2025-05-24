@@ -1,4 +1,4 @@
-const pool = require('../infrastructure/db');
+const pool = require('../infraestructura/baseDatos');
 
 const getDatabaseSchema = async () => {
     const query = `
