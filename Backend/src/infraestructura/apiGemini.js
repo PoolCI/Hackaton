@@ -4,7 +4,7 @@ const { getDatabaseSchema } = require('./db');
 const GEMINI_API_URL = "https://api.gemini.com/generate";
 const API_KEY = process.env.GEMINI_API_KEY;
 
-const getGeminiResponse = async (query, tenantId) => {
+const getGeminiQuery = async (query, tenantId) => {
     const schema = await getDatabaseSchema();
     const prompt = `Aquí está la estructura de mi base de datos multi-tenant: ${JSON.stringify(schema)}. Genera una consulta SQL para: ${query} dentro del tenant con ID = ${tenantId}`;
 
@@ -25,4 +25,4 @@ const getGeminiResponse = async (query, tenantId) => {
     }
 };
 
-module.exports = { getGeminiResponse };
+module.exports = { getGeminiQuery };
